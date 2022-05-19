@@ -1,0 +1,392 @@
+/*
+ * @(#)phire_de.rcp
+ *
+ * Copyright 1999-2000, Aaron Ardiri (mailto:aaron@ardiri.com)
+ * All rights reserved.
+ *
+ * This file was generated as part of the "phire!" program developed for 
+ * the Palm Computing Platform designed by Palm: 
+ *
+ *   http://www.palm.com/ 
+ *
+ * The contents of this file is confidential and proprietrary in nature 
+ * ("Confidential Information"). Redistribution or modification without 
+ * prior consent of the original author is prohibited. 
+ *
+ * --------------------------------------------------------------------
+ *             THIS FILE CONTAINS THE GERMAN LANGUAGE TEXT
+ * --------------------------------------------------------------------
+ */
+
+#include "resource.h"
+
+ALERT ID resetHighScoresAlert DEFAULTBUTTON 1 WARNING
+BEGIN
+  TITLE "High Scores neusetzen"
+  MESSAGE "Sind Sie sicher das Sie den High Score neu setzen wollen?"
+  BUTTONS "Ja" "Nein"
+END
+
+FORM ID infoForm AT (2 2 156 156) MODAL
+BEGIN
+  TITLE "Über Phire!"
+
+  FORMBITMAP AT (8 16) BITMAP bitmapIcon
+  LABEL "http://www.gdata.de/" AUTOID AT (52 PrevTop)
+  LABEL "info@gdata.de" AUTOID AT (60 PrevBottom) FONT 1
+
+  FORMBITMAP AT (88 PrevBottom+4) BITMAP bitmapPalm
+  LABEL "\251 1999-2001" AUTOID AT (8 PrevTop+2)
+  LABEL "G DATA Software AG" AUTOID AT (8 PrevBottom)
+  LABEL "All rights reserved" AUTOID AT (8 PrevBottom)
+
+  LABEL "Phire!" AUTOID AT (8 PrevBottom+3) FONT 1
+  LABEL "Championship Edition (v1.2.1)" AUTOID AT (8 PrevBottom-1) FONT 1
+
+  LABEL "Nintendo hat keine Beteilingung an" AUTOID AT (8 PrevBottom+3)
+  LABEL "der Entwicklung dieser Software." AUTOID AT (8 PrevBottom)
+
+  BUTTON "Ok" ID infoFormOkButton AT (CENTER 138 40 AUTO)
+END
+
+FORM ID deviForm AT (2 2 156 156) MODAL
+BEGIN
+  TITLE "Inkontabilität"
+
+  LABEL "Das Gerät ist nicht kompatibel." AUTOID AT (CENTER 20)
+  LABEL "Lesen Sie das Handbuch für Hilfe." AUTOID AT (CENTER PrevTop+11)
+
+  LABEL "http://www.gdata.de/" AUTOID AT (CENTER PrevTop+15) FONT 1
+
+  LABEL "\251 1999-2001" AUTOID AT (8 PrevTop+20)
+  FORMBITMAP AT (88 PrevTop) BITMAP bitmapPalm
+  LABEL "G DATA Software AG" AUTOID AT (8 PrevTop+12)
+  LABEL "All rights reserved" AUTOID AT (8 PrevTop+12)
+
+  LABEL "Phire!" AUTOID AT (8 PrevTop+16) FONT 1
+  LABEL "Championship Edition (v1.2.1)" AUTOID AT (8 PrevTop+12) FONT 1
+
+  BUTTON "Ok" AUTOID AT (CENTER 138 40 AUTO)
+END
+
+FORM ID cfigForm AT (2 2 156 156) MODAL
+BEGIN
+  TITLE "Konfiguration"
+
+  FORMBITMAP AT (0 32) BITMAP bitmapKeyConfig
+
+  POPUPTRIGGER "" ID cfigFormHardKey1Trigger AT (4 PrevTop-14 44 AUTO) LEFTANCHOR
+  LIST "------" "Links" "Rechts" ID cfigFormHardKey1List AT (PrevLeft+16 PrevTop 32 16) VISIBLEITEMS 3 NONUSABLE
+  POPUPLIST ID cfigFormHardKey1Trigger cfigFormHardKey1List
+
+  POPUPTRIGGER "" ID cfigFormHardKey4Trigger AT (108 PrevTop 44 AUTO) LEFTANCHOR
+  LIST "------" "Links" "Rechts" ID cfigFormHardKey4List AT (PrevLeft+16 PrevTop 32 16) VISIBLEITEMS 3 NONUSABLE
+  POPUPLIST ID cfigFormHardKey4Trigger cfigFormHardKey4List
+
+  POPUPTRIGGER "" ID cfigFormPageUpTrigger AT (56 PrevTop+8 44 AUTO) LEFTANCHOR
+  LIST "------" "Links" "Rechts" ID cfigFormPageUpList AT (PrevLeft+16 PrevTop 32 16) VISIBLEITEMS 3 NONUSABLE
+  POPUPLIST ID cfigFormPageUpTrigger cfigFormPageUpList
+
+  POPUPTRIGGER "" ID cfigFormHardKey2Trigger AT (24 PrevTop+38 44 AUTO) LEFTANCHOR
+  LIST "------" "Links" "Rechts" ID cfigFormHardKey2List AT (PrevLeft+16 PrevTop 32 16) VISIBLEITEMS 3 NONUSABLE
+  POPUPLIST ID cfigFormHardKey2Trigger cfigFormHardKey2List
+
+  POPUPTRIGGER "" ID cfigFormHardKey3Trigger AT (92 PrevTop 44 AUTO) LEFTANCHOR
+  LIST "------" "Links" "Rechts" ID cfigFormHardKey3List AT (PrevLeft+16 PrevTop 32 16) VISIBLEITEMS 3 NONUSABLE
+  POPUPLIST ID cfigFormHardKey3Trigger cfigFormHardKey3List
+
+  POPUPTRIGGER "" ID cfigFormPageDownTrigger AT (56 PrevTop+12 44 AUTO) LEFTANCHOR
+  LIST "------" "Links" "Rechts" ID cfigFormPageDownList AT (PrevLeft+16 PrevTop 32 16) VISIBLEITEMS 3 NONUSABLE
+  POPUPLIST ID cfigFormPageDownTrigger cfigFormPageDownList
+
+  LABEL "Sound:" AUTOID AT (16 PrevTop+22) FONT 1
+  PUSHBUTTON "" ID cfigFormSound0Button AT (60 PrevTop+2 9 8) GROUP 1
+  PUSHBUTTON "" ID cfigFormSound1Button AT (PrevLeft+10 PrevTop 9 8) GROUP 1
+  PUSHBUTTON "" ID cfigFormSound2Button AT (PrevLeft+10 PrevTop 9 8) GROUP 1
+  PUSHBUTTON "" ID cfigFormSound3Button AT (PrevLeft+10 PrevTop 9 8) GROUP 1
+  PUSHBUTTON "" ID cfigFormSound4Button AT (PrevLeft+10 PrevTop 9 8) GROUP 1
+  PUSHBUTTON "" ID cfigFormSound5Button AT (PrevLeft+10 PrevTop 9 8) GROUP 1
+  PUSHBUTTON "" ID cfigFormSound6Button AT (PrevLeft+10 PrevTop 9 8) GROUP 1
+  PUSHBUTTON "" ID cfigFormSound7Button AT (PrevLeft+10 PrevTop 9 8) GROUP 1
+  CHECKBOX "Sound Stumm" ID cfigFormMuteCheckbox AT (57 PrevTop+12 AUTO AUTO) 
+
+  BUTTON "Ok" ID cfigFormOkButton AT (25 138 50 AUTO)
+  BUTTON "Abbrechen" ID cfigFormCancelButton AT (85 PrevTop 50 AUTO)
+END
+
+FORM ID grayForm AT (2 2 156 156) MODAL
+BEGIN
+  TITLE "Graustufen Konfiguration"
+
+  LABEL "Einige Geräte haben Probleme mit" AUTOID AT (CENTER 16)
+  LABEL "Graustufen und erschweren die" AUTOID AT (CENTER PrevTop+11)
+  LABEL "Grafikansicht." AUTOID AT (CENTER PrevTop+11)
+
+  LABEL "Sie können unten die LCD Helligkeit" AUTOID AT (CENTER PrevTop+16)
+  LABEL "der Graustufen anpassen." AUTOID AT (CENTER PrevTop+11)
+
+  FORMBITMAP AT (4 PrevTop+16) BITMAP bitmapGrayscaleTest
+
+  PUSHBUTTON "" ID grayWhite1Button AT (68 PrevTop+1 11 8) DISABLED GROUP 1
+  PUSHBUTTON "" ID grayWhite2Button AT (PrevLeft+12 PrevTop 11 8) DISABLED GROUP 1
+  PUSHBUTTON "" ID grayWhite3Button AT (PrevLeft+12 PrevTop 11 8) DISABLED GROUP 1
+  PUSHBUTTON "" ID grayWhite4Button AT (PrevLeft+12 PrevTop 11 8) DISABLED GROUP 1
+  PUSHBUTTON "" ID grayWhite5Button AT (PrevLeft+12 PrevTop 11 8) DISABLED GROUP 1
+  PUSHBUTTON "" ID grayWhite6Button AT (PrevLeft+12 PrevTop 11 8) DISABLED GROUP 1
+  PUSHBUTTON "" ID grayWhite7Button AT (PrevLeft+12 PrevTop 11 8) DISABLED GROUP 1
+
+  PUSHBUTTON "" ID grayLightGray1Button AT (68 PrevTop+12 11 8) GROUP 2
+  PUSHBUTTON "" ID grayLightGray2Button AT (PrevLeft+12 PrevTop 11 8) GROUP 2
+  PUSHBUTTON "" ID grayLightGray3Button AT (PrevLeft+12 PrevTop 11 8) GROUP 2
+  PUSHBUTTON "" ID grayLightGray4Button AT (PrevLeft+12 PrevTop 11 8) GROUP 2
+  PUSHBUTTON "" ID grayLightGray5Button AT (PrevLeft+12 PrevTop 11 8) GROUP 2
+  PUSHBUTTON "" ID grayLightGray6Button AT (PrevLeft+12 PrevTop 11 8) GROUP 2
+  PUSHBUTTON "" ID grayLightGray7Button AT (PrevLeft+12 PrevTop 11 8) GROUP 2
+  
+  PUSHBUTTON "" ID grayDarkGray1Button AT (68 PrevTop+12 11 8) GROUP 3
+  PUSHBUTTON "" ID grayDarkGray2Button AT (PrevLeft+12 PrevTop 11 8) GROUP 3
+  PUSHBUTTON "" ID grayDarkGray3Button AT (PrevLeft+12 PrevTop 11 8) GROUP 3
+  PUSHBUTTON "" ID grayDarkGray4Button AT (PrevLeft+12 PrevTop 11 8) GROUP 3
+  PUSHBUTTON "" ID grayDarkGray5Button AT (PrevLeft+12 PrevTop 11 8) GROUP 3
+  PUSHBUTTON "" ID grayDarkGray6Button AT (PrevLeft+12 PrevTop 11 8) GROUP 3
+  PUSHBUTTON "" ID grayDarkGray7Button AT (PrevLeft+12 PrevTop 11 8) GROUP 3
+
+  PUSHBUTTON "" ID grayBlack1Button AT (68 PrevTop+12 11 8) DISABLED GROUP 4
+  PUSHBUTTON "" ID grayBlack2Button AT (PrevLeft+12 PrevTop 11 8) DISABLED GROUP 4
+  PUSHBUTTON "" ID grayBlack3Button AT (PrevLeft+12 PrevTop 11 8) DISABLED GROUP 4
+  PUSHBUTTON "" ID grayBlack4Button AT (PrevLeft+12 PrevTop 11 8) DISABLED GROUP 4
+  PUSHBUTTON "" ID grayBlack5Button AT (PrevLeft+12 PrevTop 11 8) DISABLED GROUP 4
+  PUSHBUTTON "" ID grayBlack6Button AT (PrevLeft+12 PrevTop 11 8) DISABLED GROUP 4
+  PUSHBUTTON "" ID grayBlack7Button AT (PrevLeft+12 PrevTop 11 8) DISABLED GROUP 4
+
+  BUTTON "Ok" ID grayFormOkButton AT (CENTER 138 40 AUTO)
+END
+
+FORM ID highForm AT (2 2 156 156) MODAL
+BEGIN
+  TITLE "Registrieren Sie Ihren Score"
+
+  FORMBITMAP AT (6 16) BITMAP bitmapPaw
+  LABEL "http://www.ardiri.com/" AUTOID AT (52 PrevTop+4)
+
+  LABEL "aaron@ardiri.com" AUTOID AT (54 PrevTop+11) FONT 1
+
+  LABEL "Score:" AUTOID AT (40 PrevTop+22) FONT 1
+  FIELD ID highFormScoreField AT (88 PrevTop 48 AUTO) NONEDITABLE SINGLELINE MAXCHARS 5
+  LABEL "Spiel:" AUTOID AT (40 PrevTop+12) FONT 1
+  FIELD ID highFormPlayingField AT (88 PrevTop 48 AUTO) NONEDITABLE SINGLELINE MAXCHARS 5
+  LABEL "Code:" AUTOID AT (40 PrevTop+12) FONT 1
+  FIELD ID highFormCodeField AT (88 PrevTop 48 AUTO) NONEDITABLE SINGLELINE MAXCHARS 5
+
+  LABEL "Mailen Sie diese Informationen an" AUTOID AT (CENTER PrevTop+16)
+  LABEL "die angegebene Adresse um in die" AUTOID AT (CENTER PrevTop+12)
+  LABEL "Welt Highscore Liste zu kommen." AUTOID AT (CENTER PrevTop+12)
+
+  BUTTON "Ok" ID highFormOkButton AT (CENTER 138 40 AUTO)
+END
+
+FORM ID helpForm AT (2 2 156 156) MODAL
+BEGIN
+  TITLE "Anleitung"
+
+  SCROLLBAR ID helpFormScrollBar AT (147 16 7 116) VALUE 0 MIN 0 MAX 0 PAGESIZE 100
+
+  BUTTON "Erledigt" ID helpFormOkButton AT (6 138 AUTO AUTO)
+  LABEL "\251 G DATA Software AG" AUTOID AT (56 PrevTop+1)
+END
+
+FORM ID xmemForm AT (2 2 156 156) MODAL
+BEGIN
+  TITLE "System Speicher"
+
+  FORMBITMAP AT (6 16) BITMAP bitmapIcon
+  LABEL "info@gdata.de" AUTOID AT (56 PrevTop+4) FONT 1
+  LABEL "Phire!" AUTOID AT (80 PrevBottom)
+  LABEL "http://www.gdata.de/" AUTOID AT (CENTER 48) FONT 1
+
+  LABEL "Nicht ausreichtend Speicher" AUTOID AT (CENTER PrevTop+18)
+  LABEL "für die gewünchte Operation" AUTOID AT (CENTER PrevTop+12)
+
+  LABEL "Deaktivieren Sie alle nicht nötigen" AUTOID AT (CENTER PrevTop+16)
+  LABEL "Hacks und versuchen Sie es erneut" AUTOID AT (CENTER PrevTop+12)
+  LABEL "mit der Standardeinstellung." AUTOID AT (CENTER PrevTop+12)
+
+  BUTTON "Ok" ID xmemFormOkButton AT (CENTER 138 40 AUTO)
+END
+
+FORM ID mainForm AT (0 0 160 160) NOSAVEBEHIND
+BEGIN
+  TITLE "Phire!"
+
+  BUTTON "" ID globalFormHelpButton AT (133 1 12 12) NOFRAME
+  FORMBITMAP AT (PrevLeft PrevTop) BITMAP bitmapHelp
+  BUTTON "" ID globalFormAboutButton AT (PrevLeft+14 PrevTop 12 12) NOFRAME
+  FORMBITMAP AT (PrevLeft PrevTop) BITMAP bitmapAbout
+
+  FORMBITMAP AT (0 16) BITMAP bitmapLogo
+
+  PUSHBUTTON "Spiel A" ID mainFormGameAButton AT (32 120 47 12) GROUP 1
+  PUSHBUTTON "Spiel B" ID mainFormGameBButton AT (80 PrevTop 47 12) GROUP 1
+
+  LABEL "\251 2000 G DATA Software AG" AUTOID AT (CENTER PrevTop+16) FONT 1
+END
+
+MENU ID mainMenu_nogray
+BEGIN
+  PULLDOWN "Spiel"
+  BEGIN
+    MENUITEM "Spiel A"          mainMenuItemGameA     "1"
+    MENUITEM "Spiel B"          mainMenuItemGameB     "2"
+    MENUITEM SEPARATOR
+    MENUITEM "Konfiguration"    menuItemConfig        "C"
+  END
+  PULLDOWN "Score"
+  BEGIN
+    MENUITEM "Spiel A Hoch"     mainMenuItemShowHighA "A"
+    MENUITEM "Spiel B Hoch"     mainMenuItemShowHighB "B"
+    MENUITEM SEPARATOR
+    MENUITEM "Scores neusetzen" mainMenuItemResetHigh "H"
+  END
+  PULLDOWN "Hilfe"
+  BEGIN
+    MENUITEM "Anleitung"        menuItemHelp          "I"
+    MENUITEM "Über..."          menuItemAbout
+  END
+END
+
+MENU ID mainMenu_gray
+BEGIN
+  PULLDOWN "Spiel"
+  BEGIN
+    MENUITEM "Spiel A"          mainMenuItemGameA     "1"
+    MENUITEM "Spiel B"          mainMenuItemGameB     "2"
+    MENUITEM SEPARATOR
+    MENUITEM "Graustufen"       menuItemGrayscale     "G"
+    MENUITEM SEPARATOR
+    MENUITEM "Konfiguration"    menuItemConfig        "C"
+  END
+  PULLDOWN "Score"
+  BEGIN
+    MENUITEM "Spiel A Hoch"     mainMenuItemShowHighA "A"
+    MENUITEM "Spiel B Hoch"     mainMenuItemShowHighB "B"
+    MENUITEM SEPARATOR
+    MENUITEM "Scores neusetzen" mainMenuItemResetHigh "H"
+  END
+  PULLDOWN "Hilfe"
+  BEGIN
+    MENUITEM "Anleitung"        menuItemHelp          "I"
+    MENUITEM "Über..."          menuItemAbout
+  END
+END
+
+FORM ID gameForm AT (0 0 160 160) NOSAVEBEHIND
+BEGIN
+  TITLE "Phire!"
+
+  BUTTON "" ID globalFormHelpButton AT (133 1 12 12) NOFRAME
+  FORMBITMAP AT (PrevLeft PrevTop) BITMAP bitmapHelp
+  BUTTON "" ID globalFormAboutButton AT (PrevLeft+14 PrevTop 12 12) NOFRAME
+  FORMBITMAP AT (PrevLeft PrevTop) BITMAP bitmapAbout
+
+  FORMBITMAP AT (0 16) BITMAP bitmapBack
+
+  BUTTON "" ID gameFormSoundButton AT (0 143 12 12) NOFRAME
+  FORMBITMAP AT (PrevLeft PrevTop) BITMAP bitmapSound
+  BUTTON "" ID gameFormPauseButton AT (PrevLeft+14 PrevTop 12 12) NOFRAME
+  FORMBITMAP AT (PrevLeft PrevTop) BITMAP bitmapPause
+
+  LABEL "\251 2000 G DATA Software AG" AUTOID AT (44 PrevTop)
+END
+
+MENU ID gameMenu_nogray
+BEGIN
+  PULLDOWN "Spiel"
+  BEGIN
+    MENUITEM "Pause"            gameMenuItemPause     "P"
+    MENUITEM "Reset"            gameMenuItemReset     "S"
+    MENUITEM SEPARATOR
+    MENUITEM "Ende"             gameMenuItemExit      "X"
+    MENUITEM SEPARATOR
+    MENUITEM "Konfiguration"    menuItemConfig        "C"
+  END
+  PULLDOWN "Hilfe"
+  BEGIN
+    MENUITEM "Anleitung"        menuItemHelp          "I"
+    MENUITEM "Über..."          menuItemAbout
+  END
+END
+
+MENU ID gameMenu_gray
+BEGIN
+  PULLDOWN "Spiel"
+  BEGIN
+    MENUITEM "Pause"            gameMenuItemPause     "P"
+    MENUITEM "Reset"            gameMenuItemReset     "S"
+    MENUITEM SEPARATOR
+    MENUITEM "Ende"             gameMenuItemExit      "X"
+    MENUITEM SEPARATOR
+    MENUITEM "Graustufen"       menuItemGrayscale     "G"
+    MENUITEM SEPARATOR
+    MENUITEM "Konfiguration"    menuItemConfig        "C"
+  END
+  PULLDOWN "Hilfe"
+  BEGIN
+    MENUITEM "Anleitung"        menuItemHelp          "I"
+    MENUITEM "Über..."          menuItemAbout
+  END
+END
+
+VERSION "1.2.1"
+
+ICONFAMILY 
+  "images/icon1bpp.bmp" "images/icon2bpp.bmp" "" "images/icon8bpp.bmp" 
+TRANSPARENCY 255 0 0
+
+SMALLICONFAMILY 
+  "images/smic1bpp.bmp" "images/smic2bpp.bmp" "" "images/smic8bpp.bmp"
+TRANSPARENCY 255 0 0
+
+BITMAPFAMILYSPECIAL bitmapIcon   
+  "images/icon1bpp.bmp" "images/icon2bpp.bmp" "images/icon4bpc.bmp" "" COMPRESS
+
+BITMAPFAMILYSPECIAL bitmapLogo
+  "images/logo1bpp.bmp" "images/logo2bpp.bmp" "images/logo4bpc.bmp" "" COMPRESS
+
+BITMAPFAMILY bitmapPaw
+  "images/_paw1bpp.bmp" "images/_paw2bpp.bmp" COMPRESS
+
+BITMAPFAMILYSPECIAL bitmapBack
+  "images/back1bpp.bmp" "images/back2bpp.bmp" "images/back4bpc.bmp" "" COMPRESS
+
+BITMAPFAMILYSPECIAL bitmapHelpGamePlay
+  "images/gply1bpp.bmp" "images/gply2bpp.bmp" "images/gply4bpc.bmp" "" COMPRESS
+
+BITMAPFAMILYSPECIAL bitmapPalm
+  "images/palm1bpp.bmp" "images/palm2bpp.bmp" "images/palm4bpc.bmp" "" COMPRESS
+
+BITMAP bitmapAbout "images/info1bpp.bmp" COMPRESS
+BITMAP bitmapHelp  "images/help1bpp.bmp" COMPRESS
+BITMAP bitmapSound "images/snd1bpp.bmp"  COMPRESS
+BITMAP bitmapPause "images/paws1bpp.bmp" COMPRESS
+
+BITMAPGREY bitmapGrayscaleTest "images/gray2bpp.bmp" COMPRESS
+BITMAPFAMILY bitmapKeyConfig
+  "images/keys1bpp.bmp" "images/keys2bpp.bmp" COMPRESS
+
+BITMAP bitmapDigits
+  "images/game/digs1bpp.bmp" COMPRESS
+
+BITMAP bitmapMisses
+  "images/game/miss1bpp.bmp" COMPRESS
+
+BITMAP bitmapSmokes
+  "images/game/burn1bpp.bmp" COMPRESS
+
+BITMAP bitmapTrampolines
+  "images/game/trmp1bpp.bmp" COMPRESS
+
+BITMAP bitmapJumpers
+  "images/game/jump1bpp.bmp" COMPRESS
+
+BITMAP bitmapJumperDeath
+  "images/game/die1bpp.bmp" COMPRESS
